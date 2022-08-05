@@ -4,8 +4,8 @@ import axiosRetry from "axios-retry";
 const RestaurantFinder = axios.create({
   baseURL:
     process.env.NODE_ENV !== "production"
-      ? "http://localhost:7000/api/v1/restaurants"
-      : "https://desolate-eyrie-91630.herokuapp.com/api/v1/restaurants",
+      ? "http://localhost:7000"
+      : "https://desolate-eyrie-91630.herokuapp.com",
   timeout: 5000,
 });
 
