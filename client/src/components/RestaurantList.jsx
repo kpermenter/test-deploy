@@ -15,11 +15,11 @@ const RestaurantList = (props) => {
 
   const handleUpdate = (e, id) => {
     e.stopPropagation();
-    history.push(`/restaurants/${id}/update`);
+    history.push(`https://desolate-eyrie-91630.herokuapp.com/api/v1/restaurants/${id}/update`);
   };
 
   const handleRestaurantSelect = (id) => {
-    history.push(`/restaurants/${id}`);
+    history.push(`https://desolate-eyrie-91630.herokuapp.com/api/v1/restaurants/${id}`);
   };
 
   const renderRating = (rating, count) => {

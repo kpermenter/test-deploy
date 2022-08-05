@@ -24,7 +24,7 @@ const UpdateRestaurant = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    RestaurantFinder.put(`/${id}`, {
+    RestaurantFinder.put(`https://desolate-eyrie-91630.herokuapp.com/api/v1/restaurants/${id}`, {
       name,
       location,
       price_range: price,
