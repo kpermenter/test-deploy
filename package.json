@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "start": "cd server && node server.js && cd client && npm start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cd server && npm install && node server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "addons": [
     "heroku-postgresql"

@@ -14,6 +14,7 @@ app.use(cors());
 app
   .route("/api/v1/restaurants")
   .get(async (req, res, next) => {
+    // res.sendFile(path.join(__dirname + '/client/public/index.html'));
     try {
       // const results = await db.query("SELECT * FROM restaurants");
       const results = await db.query(
@@ -28,6 +29,7 @@ app
       console.log(error);
     }
   })
+
   .post(async (req, res, next) => {
     const { name, location, price_range } = req.body;
     try {
@@ -69,6 +71,7 @@ app
       console.log(error);
     }
   })
+
   .put(async (req, res, next) => {
     const { id } = req.params;
     const { name, location, price_range } = req.body;
@@ -85,6 +88,7 @@ app
       console.log(error);
     }
   })
+
   .delete(async (req, res, next) => {
     try {
       const { id } = req.params;
