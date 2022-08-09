@@ -10,8 +10,8 @@ const app = express();
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(cors());
-app.use(express.static('/public'));
-// app.use(express.static('../client/build'));
+// app.use(express.static('/public'));
+app.use(express.static('../client/build'));
 
 app
   .route("/api/v1/restaurants")
