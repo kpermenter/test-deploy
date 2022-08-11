@@ -10,15 +10,12 @@ const app = express();
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(cors());
-// app.use(express.static('/public'));
 app.use(express.static('./client/build'));
 
 app
   .route("/api/v1/restaurants")
   .get(async (req, res, next) => {
-    // res.sendFile(path.join(__dirname + '/client/public/index.html'));
     try {
-      // const results = await db.query("SELECT * FROM restaurants");
       const results = await db.query(
         "select * from restaurants LEFT JOIN (SELECT restaurant_id, count(*), trunc(AVG(rating)) AS average_rating FROM reviews GROUP BY restaurant_id) reviews on restaurants.id = reviews.restaurant_id"
       );

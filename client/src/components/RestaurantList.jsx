@@ -14,11 +14,11 @@ const RestaurantList = (props) => {
 
   const handleUpdate = (e, id) => {
     e.stopPropagation();
-    history.push(`/api/v1/restaurants/${id}/update`);
+    history.push(`/restaurants/${id}/update`);
   };
 
   const handleRestaurantSelect = (id) => {
-    history.push(`/api/v1/restaurants/${id}`);
+    history.push(`/restaurants/${id}`);
   };
 
   const renderRating = (rating, count) => {

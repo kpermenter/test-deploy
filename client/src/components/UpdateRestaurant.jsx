@@ -24,7 +24,7 @@ const UpdateRestaurant = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    RestaurantFinder.put(`/api/v1/restaurants/${id}`, {
+    RestaurantFinder.put(`/${id}`, {
       name,
       location,
       price_range: price,
