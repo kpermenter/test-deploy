@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import RestaurantFinder from "../apis/RestaurantFinder";
 import { RestaurantsContext } from "../context/RestaurantsContext";
-import { Spinner } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import StarRating from "./StarRating";
 
