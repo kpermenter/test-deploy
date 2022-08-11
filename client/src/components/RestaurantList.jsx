@@ -61,16 +61,14 @@ const RestaurantList = (props) => {
 
   if (isLoading) {
     return (
-      <div className="d-flex justify-content-center">
-        <Spinner animation="border" role="status">
-          <span className="sr-only">Loading...</span>
-        </Spinner>
+      <div className="d-flex justify-content-center" style={{ color: 'red' }}>
+        <i class="fas fa-hamburger fa-spin fa-5x"></i>
       </div>
     );
   }
 
   return (
-    <div className="table-responsive">
+    <div className="table-responsive pt-2 pr-4 pl-4">
       <table className="table table-striped table-hover table-dark">
         <thead>
           <tr className="bg-primary">

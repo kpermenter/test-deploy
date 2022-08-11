@@ -5,7 +5,7 @@ import RestaurantList from "../components/RestaurantList"
 
 const Home = (props) => {
   return (
-    <div>
+    <div style={{ backgroundColor: '#ffc107' }}>
       <Header/>
       <AddRestaurant/>
       <RestaurantList />

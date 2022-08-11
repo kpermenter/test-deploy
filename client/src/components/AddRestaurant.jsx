@@ -63,7 +63,13 @@ const AddRestaurant = () => {
               <option value="5">$$$$$</option>
             </select>
           </div>
-          <button type="submit" disabled={isDisabled} className="col-auto btn btn-primary">ADD</button>
+        </div>
+        <div style={{ textAlign: 'center', paddingTop: 15 }}>
+        <button type="submit" disabled={isDisabled} className="col-auto btn btn-sm btn-primary" style={{ borderRadius: '40%' }}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#ffc107" viewBox="0 0 16 16">
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+          </svg>
+          </button>
         </div>
       </form>
     </div>

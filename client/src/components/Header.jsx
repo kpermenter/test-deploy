@@ -2,8 +2,9 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div>
-      <h1 className="font-weight-light display-1 text-center">Restaurant Finder</h1>
+    <div className="pt-5" style={{ color: '#343a40' }}>
+      <h1 className="font-weight-bold display-4 text-center">ATX Eats</h1>
+      <h2 className="font-weight-bold display-5 text-center pb-3">Eat. Review. Repeat. 🍔</h2>
     </div>
   )
 }
