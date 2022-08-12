@@ -12,11 +12,9 @@ const App = () => {
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />
-            {/* <Route exact path="https://desolate-eyrie-91630.herokuapp.com/api/v1/restaurants/:id/update" component={UpdatePage} /> */}
             <Route exact path="/restaurants/:id/update" component={UpdatePage} />
             <Route
               exact
-              // path="https://desolate-eyrie-91630.herokuapp.com/api/v1/restaurants/:id"
               path="/restaurants/:id"
               component={RestaurantdetailPage}
             />
