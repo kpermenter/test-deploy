@@ -4,14 +4,13 @@ import RestaurantFinder from '../apis/RestaurantFinder';
 import AddReview from '../components/AddReview';
 import Reviews from '../components/Reviews';
 import StarRating from '../components/StarRating';
-import { Spinner } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { RestaurantsContext } from '../context/RestaurantsContext';
 
 const RestaurantdetailPage = () => {
   const {id} = useParams()
   const [isLoading, setIsLoading] = useState(true)
-  const {selectedRestaurant, setSelectedRestaurant} = useContext(RestaurantsContext)  
+  const { selectedRestaurant, setSelectedRestaurant } = useContext(RestaurantsContext) 
 
   useEffect(() => {
     RestaurantFinder.get(`/${id}`)
@@ -29,7 +28,7 @@ const RestaurantdetailPage = () => {
 
   if (isLoading) {
     return (
-      <div className="d-flex justify-content-center" style={{ color: 'red' }}>
+      <div className="d-flex justify-content-center" style={{ color: '#ff3547' }}>
         <i class="fas fa-hamburger fa-spin fa-5x"></i>
       </div>
     );
@@ -39,7 +38,7 @@ const RestaurantdetailPage = () => {
     <div>
       {selectedRestaurant && (
         <>
-        <h1 className="font-weight-bold display-4 text-center pt-5">{selectedRestaurant.restaurant.name}</h1>
+        <h1 className="font-weight-bold display-4 text-center pt-5" style={{ color: '#ff3547'}}>{selectedRestaurant.restaurant.name}</h1>
         <div className="text-center">
           <StarRating rating={selectedRestaurant.restaurant.average_rating} />
           <span className="text-warning ml-1">

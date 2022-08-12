@@ -60,7 +60,7 @@ const RestaurantList = (props) => {
 
   if (isLoading) {
     return (
-      <div className="d-flex justify-content-center" style={{ color: 'red' }}>
+      <div className="d-flex justify-content-center" style={{ color: '#ff3547' }}>
         <i class="fas fa-hamburger fa-spin fa-5x"></i>
       </div>
     );
