@@ -8,7 +8,7 @@
     "npm": "6.14.5"
   },
   "scripts": {
-    "start": "node server.js && cd ../client && npm start",
+    "start": "concurrently \"node server.js\" \"cd ./client && npm start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "addons": [
