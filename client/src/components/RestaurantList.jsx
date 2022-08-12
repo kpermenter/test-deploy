@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import RestaurantFinder from "../apis/RestaurantFinder";
 import { RestaurantsContext } from "../context/RestaurantsContext";
@@ -67,48 +68,54 @@ const RestaurantList = (props) => {
   }
 
   return (
-    <div className="table-responsive pt-2 pr-4 pl-4">
-      <table className="table table-striped table-hover table-dark">
-        <thead>
-          <tr className="bg-primary">
-            <th scope="col">Restaurant</th>
-            <th scope="col">Location</th>
-            <th scope="col">Price Range</th>
-            <th scope="col">Ratings</th>
-            <th scope="col">Edit</th>
-            <th scope="col">Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          {restaurants.map(
-            ({ id, name, location, price_range, count, average_rating }) => (
-              <tr onClick={() => handleRestaurantSelect(id)} key={id}>
-                <th scope="row">{name}</th>
-                <td>{location}</td>
-                <td>{"$".repeat(price_range)}</td>
-                <td>{renderRating(average_rating, count)}</td>
-                <td>
-                  <button
-                    onClick={(e) => handleUpdate(e, id)}
-                    className="btn btn-warning"
-                  >
-                    Update
-                  </button>
-                </td>
-                <td>
-                  <button
-                    onClick={(e) => handleDelete(e, id)}
-                    className="btn btn-danger"
-                  >
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            )
-          )}
-        </tbody>
-      </table>
-    </div>
+    <Container>
+      <Row>
+        <Col xs={12}>
+          <div className="table-responsive pt-2 pl-2 pr-2">
+            <table className="table table-striped table-hover table-dark">
+              <thead>
+                <tr className="bg-primary">
+                  <th scope="col">Restaurant</th>
+                  <th scope="col">Location</th>
+                  <th scope="col">Price Range</th>
+                  <th scope="col">Ratings</th>
+                  <th scope="col">Edit</th>
+                  <th scope="col">Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                {restaurants.map(
+                  ({ id, name, location, price_range, count, average_rating }) => (
+                    <tr onClick={() => handleRestaurantSelect(id)} key={id}>
+                      <th scope="row">{name}</th>
+                      <td>{location}</td>
+                      <td>{"$".repeat(price_range)}</td>
+                      <td>{renderRating(average_rating, count)}</td>
+                      <td>
+                        <button
+                          onClick={(e) => handleUpdate(e, id)}
+                          className="btn btn-sm btn-warning"
+                        >
+                          Update
+                        </button>
+                      </td>
+                      <td>
+                        <button
+                          onClick={(e) => handleDelete(e, id)}
+                          className="btn btn-sm btn-danger"
+                        >
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
+                  )
+                )}
+              </tbody>
+            </table>
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
