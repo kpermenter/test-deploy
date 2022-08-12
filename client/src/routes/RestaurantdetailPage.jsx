@@ -29,10 +29,8 @@ const RestaurantdetailPage = () => {
 
   if (isLoading) {
     return (
-      <div className="d-flex justify-content-center">
-        <Spinner animation="border" role="status">
-          <span className="sr-only">Loading...</span>
-        </Spinner>
+      <div className="d-flex justify-content-center" style={{ color: 'red' }}>
+        <i class="fas fa-hamburger fa-spin fa-5x"></i>
       </div>
     );
   }
@@ -41,7 +39,7 @@ const RestaurantdetailPage = () => {
     <div>
       {selectedRestaurant && (
         <>
-        <h1 className="font-weight-light display-1 text-center">{selectedRestaurant.restaurant.name}</h1>
+        <h1 className="font-weight-bold display-4 text-center pt-5">{selectedRestaurant.restaurant.name}</h1>
         <div className="text-center">
           <StarRating rating={selectedRestaurant.restaurant.average_rating} />
           <span className="text-warning ml-1">

@@ -39,7 +39,7 @@ const UpdateRestaurant = () => {
 
   return (
     <>
-      <h1 className="font-weight-light display-2 text-center">
+      <h1 className="font-weight-bold display-4 text-center pt-5">
         Update {name}
       </h1>
       <div>
